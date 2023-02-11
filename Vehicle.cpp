@@ -1,4 +1,5 @@
 #include "Vehicle.h"
+#include <iostream>
 
 void Vehicle::setSpeed(int s)
 {

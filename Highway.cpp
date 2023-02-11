@@ -4,7 +4,6 @@
 #include "SemiTruck.h"
 
 #include <algorithm>
-#include <cassert>
 
 void Highway::changeSpeed(int newSpeed)
 {
