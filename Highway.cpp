@@ -1,5 +1,7 @@
 #include "Highway.h"
+#include "Vehicle.h"
 
+#include <algorithm>
 #include <cassert>
 
 void Highway::changeSpeed(int newSpeed)

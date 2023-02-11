@@ -1,4 +1,5 @@
 #include "Motorcycle.h"
+#include <iostream>
 
 Motorcycle::Motorcycle(const std::string& n) : Vehicle(n) {}
 
