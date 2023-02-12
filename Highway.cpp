@@ -21,15 +21,15 @@ void Highway::addVehicleInternal(Vehicle* v)
     do not call `setSpeed`.  Pick a different function.
     */
 
-    if (Car* car = dynamic_cast<Car*>(v); car != nullptr)
+    if (auto* car = dynamic_cast<Car*>(v))
     {
         car->closeWindows();
     }
-    else if (Motorcycle* motorcycle = dynamic_cast<Motorcycle*>(v); motorcycle != nullptr)
+    else if (auto* motorcycle = dynamic_cast<Motorcycle*>(v))
     {
         motorcycle->lanesplitAndRace(130);
     }
-    else if (SemiTruck* semiTruck = dynamic_cast<SemiTruck*>(v); semiTruck != nullptr)
+    else if (auto* semiTruck = dynamic_cast<SemiTruck*>(v))
     {
         semiTruck->headlightFlasher();
     }
@@ -43,15 +43,15 @@ void Highway::removeVehicleInternal(Vehicle* v)
     trucks pull over, but cars and bikes try to evade!!
     */
 
-    if (Car* car = dynamic_cast<Car*>(v); car != nullptr)
+    if (auto* car = dynamic_cast<Car*>(v))
     {
         car->tryToEvade();
     }
-    else if (Motorcycle* motorcycle = dynamic_cast<Motorcycle*>(v); motorcycle != nullptr)
+    else if (auto* motorcycle = dynamic_cast<Motorcycle*>(v))
     {
         motorcycle->tryToEvade();
     }
-    else if (SemiTruck* semiTruck = dynamic_cast<SemiTruck*>(v); semiTruck != nullptr)
+    else if (auto* semiTruck = dynamic_cast<SemiTruck*>(v))
     {
         semiTruck->pullOver();
     }

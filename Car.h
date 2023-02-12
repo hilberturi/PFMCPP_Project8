@@ -2,7 +2,7 @@
 
 #include "Vehicle.h"
 
-struct Car : public Vehicle
+struct Car : Vehicle
 {
     Car(const std::string& s);
 
